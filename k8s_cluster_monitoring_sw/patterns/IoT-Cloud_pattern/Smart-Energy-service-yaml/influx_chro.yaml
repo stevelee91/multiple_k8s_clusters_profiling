@@ -1,0 +1,71 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb
+  labels:
+    app: influxdb
+spec:
+  type: NodePort
+  ports:
+  - name: "influxdb"
+    port: 8086
+    nodePort: 32015
+  selector:
+    app: influxdb
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: influxdb
+spec:
+  selector:
+    matchLabels:
+      app: influxdb
+  template:
+    metadata:
+      labels:
+        app: influxdb
+    spec:
+      containers:
+      - name: influxdb
+        image: influxdb
+        ports:
+        - containerPort: 8086
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chronograf
+  labels:
+    app: chronograf
+spec:
+  type: NodePort
+  ports:
+  - name: "chronograf"
+    port: 8888
+    nodePort: 32016
+  selector:
+    app: chronograf
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chronograf
+spec:
+  selector:
+    matchLabels:
+      app: chronograf
+  template:
+    metadata:
+      labels:
+        app: chronograf
+    spec:
+      containers:
+      - name: chronograf
+        image: chronograf
+        ports:
+        - containerPort: 8888
+

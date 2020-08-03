@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-pattern
+spec:
+  backoffLimit: 6 # number of retries before throwing error
+  activeDeadlineSeconds: 100 # time to allow job to run
+  template:
+    metadata:
+      labels:
+        app: ml-pattern
+        tier: job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: job
+          image: lshyeung/keras_pattern

@@ -1,0 +1,17 @@
+NAMESPACE     NAME                                     READY   STATUS    RESTARTS   AGE    IP               NODE       NOMINATED NODE   READINESS GATES
+default       mysql-6845698854-w5lm9                   1/1     Running   0          13s    10.32.0.5        worker     <none>           <none>
+default       request-7f6bb78985-c8qlm                 1/1     Running   0          83d    10.32.0.7        worker     <none>           <none>
+default       web-3tier-8d94f87c5-ckt29                1/1     Running   0          83d    10.32.0.6        worker     <none>           <none>
+default       wordpress-74747f4dbf-p95cx               1/1     Running   0          13s    10.32.0.8        worker     <none>           <none>
+kube-system   coredns-5c98db65d4-nrmrq                 1/1     Running   27         137d   10.32.0.2        worker     <none>           <none>
+kube-system   coredns-5c98db65d4-qgrk9                 1/1     Running   35         137d   10.40.0.1        master-3   <none>           <none>
+kube-system   etcd-master-3                            1/1     Running   19         137d   203.237.53.203   master-3   <none>           <none>
+kube-system   kube-apiserver-master-3                  1/1     Running   26         137d   203.237.53.203   master-3   <none>           <none>
+kube-system   kube-controller-manager-master-3         1/1     Running   31         137d   203.237.53.203   master-3   <none>           <none>
+kube-system   kube-proxy-djnwz                         1/1     Running   4          137d   203.237.53.227   worker     <none>           <none>
+kube-system   kube-proxy-smmtc                         1/1     Running   4          137d   203.237.53.203   master-3   <none>           <none>
+kube-system   kube-scheduler-master-3                  1/1     Running   33         137d   203.237.53.203   master-3   <none>           <none>
+kube-system   weave-net-bgfrp                          2/2     Running   12         137d   203.237.53.203   master-3   <none>           <none>
+kube-system   weave-net-hvtmh                          2/2     Running   12         137d   203.237.53.227   worker     <none>           <none>
+monitoring    grafana-app-556dd4bfb6-nx2v9             1/1     Running   4          133d   10.32.0.4        worker     <none>           <none>
+monitoring    prometheus-deployment-7bc6dc6f77-7rxrh   1/1     Running   2          110d   10.32.0.3        worker     <none>           <none>
